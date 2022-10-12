@@ -7,7 +7,7 @@ namespace _3to1
     {
         static void Main()
         {
-            bool endApp = true;
+            bool endApp = false;
             do
             {
                 Console.WriteLine("Выберите программу, которую хотите запустить:");
@@ -33,13 +33,13 @@ namespace _3to1
                         NumbersOut();
                         break;
                     case 4:
-                        endApp = false;
+                        endApp = true;
                         break;
                     default:
                         Console.WriteLine("Такой операции нет!");
                         break;
                 }
-            } while (endApp);
+            } while (!endApp);
         }
 
         static void GameOut()
@@ -101,7 +101,7 @@ namespace _3to1
 
         static void NumbersOut()
         {
-            bool endApp = false;
+            bool endMiniApp = false;
             Console.WriteLine("Программа 3 - Вывод делителей числа");
             Console.WriteLine("___________________________________");
             do
@@ -110,7 +110,7 @@ namespace _3to1
                 string numberInput = Console.ReadLine();
                 if (numberInput == "выйти")
                 {
-                    endApp = true;
+                    endMiniApp = true;
                 }   
                 else
                 {
@@ -142,7 +142,7 @@ namespace _3to1
                     }
                     Console.WriteLine("\n");
                 }
-            } while (!endApp);
+            } while (!endMiniApp);
             
         }
     }
